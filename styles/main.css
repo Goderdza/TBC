@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+.header {
+  background-color: #f9fafa;
+  height: 80px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.header_container {
+  background-color: #f9fafa;
+  border: black 2px solid;
+  width: 100%;
+  height: 100%;
+  max-width: 1110px;
+  display: flex;
+  align-items: center;
+  margin: 0 166px 0 166px;
+  position: relative;
+}
