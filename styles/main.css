@@ -3,12 +3,19 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'tbcxregular';
+  src: url(fonts/TBCXRegular.dee156cc.woff2);
+}
+
 body {
   color: #555F5F;
-  background-color: #eeeeee;
-  font-family: sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+  background-color: #f9fafa;
+  font-family: 'tbcxregular', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+
 }
 
 .page_wrapper {
@@ -17,13 +24,17 @@ body {
   display: flex;
 }
 
+.padding_global {
+  padding-left: 47px;
+  padding-right: 47px;
+
+}
+
 .header {
   z-index: 100;
   height: 80px;
   background-color: #fff;
   border-bottom: 1px solid #eef1f1;
-  padding-left: 47px;
-  padding-right: 47px;
   position: fixed;
   top: 0;
   bottom: auto;
@@ -32,42 +43,27 @@ body {
 }
 
 .header_container {
-  z-index: 103;
-  width: 100%;
-  height: 100%;
-  max-width: 1110px;
-  gap: 32px;
-  justify-content: flex;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-}
-
-.header_container {
-  background-color: #f9fafa;
   width: 100%;
   height: 100%;
   max-width: 1110px;
   display: flex;
   align-items: center;
   gap: 32px;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
 }
 
 .concept_link {
   color: inherit;
+  width: 165px;
+  line-height: 20px;
   text-decoration: none;
   cursor: "pointer";
   margin-right: auto;
 }
 
-.header_buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-left: auto;
-}
+
 
 .button_icon {
   z-index: 2;
@@ -85,9 +81,32 @@ body {
   display: flex;
 }
 
+.product_text,
+.offer_text,
+.concept_text {
+  height: 100%;
+  display: block;
+  color: #141719;
+  margin-left: 0;
+  margin-right: 0;
+  cursor: pointer;
+  line-height: 1.7;
+}
+
+.header_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-left: auto;
+}
 .search_button {
   transition: color 0.25s ease-in-out;
   cursor: pointer;
+  line-height: 1.7;
+  height: 24px;
+  width: 24px;
+
 }
 
 .search_button:hover {
@@ -100,7 +119,7 @@ body {
   grid-column-gap: 6px;
   text-transform: uppercase;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
   transition: color 0.25s ease-in-out;
@@ -110,8 +129,13 @@ body {
 .subscribe_buttons:visited {
   color: #182cc0;
 }
+
 .subscribe_buttons:hover {
   color: #007aff;
+}
+
+.icon {
+  height: 24px;
 }
 
 .lang_buttons {
@@ -130,4 +154,93 @@ body {
 
 .lang_buttons:hover {
   background-color: #d2d7d8;
+}
+
+.scroll-page {
+  height: 100vh;
+  z-index: 99;
+  overflow-x: hidden;
+
+}
+
+.heading {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading_text {
+  width: 100%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #141719;
+  font-weight: 500;
+  font-size: 12px;
+
+}
+
+.heading_text span {
+  display: flex;
+}
+
+.first_banner {
+  padding-top: 32px;
+  padding-bottom: 60px;
+ 
+}
+
+.banner_container {
+  width: 100%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner {
+  color: #fff;
+  background-color: #000;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.banner_content {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;  
+
+
+}
+
+.banner_img,
+.banner_img-wrapper {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.banner_img-wrapper {
+  opacity: .7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.second_banner-message {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.banner_message_text {
+  color: #141719;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
 }

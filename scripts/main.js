@@ -5,3 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "https://tbcconcept.ge/ge";
     });
 });
+document.addEventListener('gesturestart', function(e) {
+  e.preventDefault();
+});
